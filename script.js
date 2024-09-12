@@ -52,8 +52,16 @@ console.log("=============================")
         // This condition should be met if the plant count after the given number of weeks is less than 50% of the maximum capacity of the garden.
 // Within your submission, include the results for 1, 2, and 3 weeks of growth as inputs.
 
-if () {
-    
+if (numPlantAfterSomeWeek > 0.8 * maxPlantsAreaHold && numPlantAfterSomeWeek <= 0.8 * maxPlantsAreaHold) {
+    console.log(`Prune the plants, they are exceeding capacity!`);
+} else {
+    console.log("Plant more, there's room for more plants.");
+}
+
+// Loop through 1, 2, and 3 weeks of growth
+for (let w = 1; w <= 3; w++) {
+    let numPlants = initialPlant * 2 ** w;
+    console.log(`After week ${w}, the number of plants is: ${numPlants}`);
 }
 
 // Part 2: Thinking Bigger
